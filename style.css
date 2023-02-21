@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+button {
+	font-family: "Poppins", sans-serif;
+}
+
+header {
+	background-color: rgb(255, 255, 255);
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	height: 15vh;
+	justify-content: space-around;
+	box-shadow: inset 0px 10px 10px -5px rgba(131, 126, 126, 0.75),
+		0px 10px 10px -5px rgba(198, 191, 191, 0.5);
+	/* box-shadow: inset 0px 5px 5px -5px rgba(233, 223, 223, 0.75);
+	box-shadow: 0px 10px 10px -5px rgba(198, 191, 191, 0.5); */
+}
+
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	gap: 8rem;
+}
+
+.nav-link {
+	padding-bottom: 5px;
+	text-decoration: none;
+	font-weight: bolder;
+	position: relative;
+	color: rgb(139, 109, 159);
+}
+
+.nav-link:active {
+	color: rgb(139, 109, 159);
+}
+
+.nav-link::before {
+	content: "";
+	position: absolute;
+	bottom: -3px; /* position the line underneath the text */
+	left: 0;
+	width: 0%;
+	height: 3px; /* set the height of the line */
+	background-color: rgb(95, 105, 105);
+	transition: width 0.2s ease-in-out; /* add a transition to the width property */
+}
+
+.nav-link:hover::before {
+	width: 100%; /* set the width to 100% when hovering */
+}
+
+.logo {
+	height: 85px;
+}
+
+.cart {
+	background-color: rgb(220, 215, 246);
+	width: 90px;
+	height: 40px;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.number {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: white;
+}
+
+.section1 {
+	position: relative;
+	height: 85vh;
+	display: flex;
+}
+
+.many {
+	height: 85vh;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.skininfo {
+	position: relative;
+	background-color: rgba(247, 229, 229, 0.534);
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	width: 60vh;
+	height: 30vh;
+	position: absolute;
+	bottom: 60px;
+	left: 50px;
+	justify-content: space-evenly;
+	padding: 20px;
+}
+
+.skininfo p {
+	font-weight: bold;
+	color: rgb(103, 105, 105);
+}
+
+.skininfo button {
+	width: 20vh;
+	border: none;
+	padding: 15px;
+	border-radius: 40px;
+	background-color: rgb(239, 216, 237);
+	margin-top: 10px;
+	font-weight: bold;
+	transition: 0.6s;
+}
+
+.shop:hover {
+	background-color: rgb(152, 150, 150);
+	color: rgb(239, 216, 237);
+	transition: 0.5s ease-in-out;
+}
+
+.cina {
+	height: 40vh;
+	position: absolute;
+	top: 65px;
+	left: 100px;
+	filter: drop-shadow(20px 10px 5px rgb(237, 233, 233));
+	z-index: 3;
+}
+
+.section2 {
+	height: 85vh;
+	background-color: rgb(243, 240, 240);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+/* SLIDER */
+
+.slider-container {
+	width: 80%;
+	margin: auto;
+	position: relative;
+	margin-top: 80px;
+}
+
+.slider {
+	width: calc(100% * 5);
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.slider-item {
+	width: calc(100% / 5);
+	height: 300px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.popular {
+	font-weight: bolder;
+	font-size: 250%;
+	border-bottom: 2px solid rgb(193, 185, 185);
+	padding-bottom: 10px;
+}
+
+.prod {
+	height: 40vh;
+}
+
+.productdiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.productdiv p {
+	font-weight: bold;
+	color: rgb(134, 131, 127);
+}
+
+.arrow {
+	height: 3vh;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.pro {
+	margin-top: 15px;
+}
+
+.slider-button {
+	position: absolute;
+	top: 60%;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: none;
+	background-color: rgba(206, 189, 161, 0.5);
+	cursor: pointer;
+	font-size: 25px;
+}
+
+.slider-button-left {
+	left: 0;
+}
+
+.slider-button-right {
+	right: 0;
+}
+
+.section3 {
+	height: 85vh;
+	background-color: rgb(238, 237, 237);
+	position: relative;
+	overflow: hidden;
+}
+
+.solution {
+	background-color: white;
+	position: absolute;
+	left: 50px;
+	bottom: 39.5vh;
+	width: 25rem;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.solution p {
+	font-weight: bolder;
+	color: rgb(188, 184, 184);
+}
+
+.shopbutton {
+	border: none;
+	padding: 10px;
+	width: 8rem;
+	font-size: 15px;
+	font-weight: bold;
+	border-radius: 50px;
+}
+
+.company {
+	display: flex;
+	flex-direction: column;
+	width: 50vh;
+	background-color: rgb(247, 247, 247);
+	padding: 20px;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+.company h2,
+.customercare h2 {
+	margin-bottom: 10px;
+}
+
+.company a,
+.customercare a {
+	text-decoration: none;
+	font-weight: bold;
+	color: rgb(156, 155, 155);
+}
+
+.serum {
+	height: 10vh;
+	position: absolute;
+	bottom: 7rem;
+	left: 35rem;
+}
+
+.customercare {
+	display: flex;
+	flex-direction: column;
+	width: 50vh;
+	background-color: rgb(247, 247, 247);
+	padding: 20px;
+	margin-left: 50rem;
+	margin-top: -10rem;
+}
+
+.social {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	margin-left: 78rem;
+	margin-top: -6rem;
+}
+
+.social img {
+	height: 3.5vh;
+}
